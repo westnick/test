@@ -36,9 +36,9 @@ class StoragefilesController < ApplicationController
     pub = 'public'
     case params[:ffield]
     when 'files_type','size','name'
-      @sfiles = Storagefile.find(:all, :conditions =>["access = ? AND user_id <> ?", pub, params[:id]], :order => "#{params[:ffield]} #{params[:order]}")
+      @sfiles = Storagefile.find(:all, :conditions =>["access = ? AND user_id <> ?", pub, session[:id]], :order => "#{params[:ffield]} #{params[:order]}")
     else
-      @sfiles = Storagefile.find(:all, :conditions =>["access = ? AND user_id <> ?", pub, params[:id]], :order => "user_id asc")
+      @sfiles = Storagefile.find(:all, :conditions =>["access = ? AND user_id <> ?", pub, session[:id]], :order => "user_id asc")
     end
     render :template => "./storagefiles/show_public"
   end
