@@ -1,0 +1,41 @@
+
+<div>
+Files list:
+<p> Перегляд списку файлів інших користувачів:</p>
+<p>Сортування за:</p>
+<ol>
+  <li>
+    <%= sort_show_url(params[:action],'Типом','files_type')-%>
+  </li>
+  <li>
+    <%= sort_show_url(params[:action],'Розміром','size') -%>
+  </li>
+  <li>
+    <%= sort_show_url(params[:action],'Назвою','name') -%>
+  </li>
+</ol>
+</div>
+
+    <div class="colls">
+        <div class="header"> File Name &nbsp </div>
+        <div class="header field"> File Type &nbsp </div>
+        <div class="header field ffield"> File Size &nbsp </div>
+        <div class="header field ffield"> User &nbsp</div>
+        <div class="header field ffield"> File Access &nbsp</div>
+    </div>
+    <div style="clear: both;height:0px;"> &nbsp </div>
+
+    <% @sfiles.each do |sfile| %>
+        <div class="colls">
+          <div class="header" ><%= sfile.name -%></div>
+          <div class="header field" ><%= sfile.files_type -%></div>
+          <div class="header field ffield" ><%= sfile.size -%></div>
+          <div class="header field ffield" ><%= user_name(sfile.user_id) -%></div>
+          <div class="header field ffield" ><%= sfile.access -%></div>
+        </div>
+    <%end-%>
+<div class="bottomt showpub">  &nbsp</div>
+
+<div>
+</div>
+<div><%=  link_to "Back", user_url(:id => session[:id]) %></div>
