@@ -41244,3 +41244,3505 @@ Processing SessionsController#new (for 127.0.0.1 at 2011-05-23 11:43:34) [GET]
 Rendering template within layouts/application
 Rendering sessions/new
 Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (125.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#show (for 127.0.0.1 at 2011-05-24 11:53:35) [GET]
+  Parameters: {"id"=>"uploadFile"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:require_authentication] rendered_or_redirected.
+Completed in 1812ms (DB: 125) | 302 Found [http://localhost/storagefiles/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 11:53:53) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 266ms (View: 266, DB: 0) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-05-24 11:54:04) [GET]
+
+ActionController::RoutingError (No route matches "/test.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 11:59:45) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "authenticity_token"=>"EIkUBBs5eIwyc0OCqIMgeRqP/2IJ4rYKGhDKZaOHYOQ=", "login"=>"root", "password"=>"cjdthityyj"}
+
+ArgumentError (The :dependent option expects either :destroy, :delete_all, or :nullify (:destroy_all)):
+  (eval):3:in `has_many'
+  app/models/user.rb:22
+  lib/authenticated_system.rb:138:in `logout_keeping_session!'
+  app/controllers/sessions_controller.rb:10:in `create'
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 12:18:35) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "authenticity_token"=>"EIkUBBs5eIwyc0OCqIMgeRqP/2IJ4rYKGhDKZaOHYOQ=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (156.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (31.2ms)[0m   [0mUPDATE `users` SET `updated_at` = '2011-05-24 09:18:37', `remember_token_expires_at` = '2011-06-07 09:18:35', `remember_token` = 'b4bd71b6212c25352d2a04114e6ea0abaa28af0b' WHERE `id` = 1[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 2594ms (DB: 219) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 12:18:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-05-24 12:18:41) [GET]
+
+ActionController::RoutingError (No route matches "/test.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-05-24 12:18:58) [GET]
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 12:18:58) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 12:20:06) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-05-24 12:20:09) [GET]
+
+ActionController::RoutingError (No route matches "/test.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 12:20:23) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "authenticity_token"=>"+bHNOwngswi4zWXpEfZAq4Xsw1Rx9Y1E6Ws+SXkaaPk=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2011-05-24 09:20:23', `remember_token_expires_at` = '2011-06-07 09:20:23', `remember_token` = '0ad548ac1db4149c268260c010c4bfc3c0dfba40' WHERE `id` = 1[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 141ms (DB: 31) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 12:20:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-05-24 12:20:37) [GET]
+Redirected to http://localhost:3000/
+Completed in 47ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 12:20:37) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 12:24:36) [GET]
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:require_authentication] rendered_or_redirected.
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/storagefiles?id=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 12:24:36) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-05-24 12:24:37) [GET]
+
+ActionController::RoutingError (No route matches "/test.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-05-24 12:24:37) [GET]
+
+ActionController::RoutingError (No route matches "/test.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 12:24:42) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 12:24:48) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"G9YeeLplPuPQyAccD9sFm28iy9GwrnxFQttwrDfeA8w=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2011-05-24 09:24:48', `remember_token_expires_at` = NULL, `remember_token` = NULL WHERE `id` = 1[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 141ms (DB: 47) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 12:24:48) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-05-24 12:24:50) [GET]
+Redirected to http://localhost:3000/
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 12:24:50) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 12:25:26) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-05-24 12:25:29) [GET]
+
+ActionController::RoutingError (No route matches "/test.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 12:25:41) [POST]
+  Parameters: {"remember_me"=>"1", "commit"=>"Log in", "authenticity_token"=>"bpj+344v62BV+a8cHrx37DXtwFvCChgfkqigQMznMyw=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2011-05-24 09:25:41', `remember_token_expires_at` = '2011-06-07 09:25:41', `remember_token` = '7cd95f15dae1fab0f0ab0b5b8ca3e9989456ceb1' WHERE `id` = 1[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 62ms (DB: 31) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 12:25:41) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-05-24 12:25:48) [GET]
+Redirected to http://localhost:3000/
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 12:25:48) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 13:11:24) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 13:11:29) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE `users` SET `updated_at` = '2011-05-24 10:11:29', `remember_token_expires_at` = NULL, `remember_token` = NULL WHERE `id` = 1[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 94ms (DB: 62) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 13:11:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+
+ActionView::TemplateError (undefined method `storagefiles_path' for #<ActionView::Base:0x3af8be8>) on line #17 of app/views/users/show.html.erb:
+14: <ol>
+15:   <li>Реєстрація нового користувача.</li>
+16:   <li>Вхід для користувача.</li>
+17:   <li><%=link_to "Завантаження файлу.", storagefiles_path(:id =>session[:id])  %></li>
+18:   <li>
+19:     <%=link_to "Перегляд та редагування списку файлів користувача (сортування за типом, розміром,
+20:     назвою; можливість видалити файл чи відмітити як загальнодоступний).", storagefile_path(@user.id) %>
+
+    app/views/users/show.html.erb:17
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 13:13:18) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 13:13:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+
+ActionView::TemplateError (undefined method `storagefile_path' for #<ActionView::Base:0x3b78928>) on line #20 of app/views/users/show.html.erb:
+17:   <li><%=link_to "Завантаження файлу.", user_storagefiles_path(@user)  %></li>
+18:   <li>
+19:     <%=link_to "Перегляд та редагування списку файлів користувача (сортування за типом, розміром,
+20:     назвою; можливість видалити файл чи відмітити як загальнодоступний).", storagefile_path(@user.id) %>
+21:   </li>
+22:   <li>
+23:     <%=link_to "Перегляд файлів інших користувачів.",
+
+    app/views/users/show.html.erb:20
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 13:46:06) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 453ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 13:46:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 484ms (View: 156, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 13:46:13) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 13:46:43) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 13:46:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 13:46:48) [GET]
+  Parameters: {"user_id"=>"1"}
+Rendering template within layouts/application
+Rendering storagefiles/new
+
+ActionView::TemplateError (user_url failed to generate from {:action=>"show", :controller=>"users"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?) on line #20 of app/views/storagefiles/new.html.erb:
+17: <%= submit_tag "Upload" %>
+18: <% end %>
+19: 
+20: <%=  link_to "Back", user_url(params[:id])%>
+
+    (eval):16:in `user_url'
+    app/views/storagefiles/new.html.erb:20
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 13:50:47) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 13:50:51) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 13:50:54) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed in 94ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-05-24 13:50:54) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:33:in `index'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 13:51:02) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 13:51:08) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-05-24 13:51:09) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:33:in `index'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 13:53:48) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-05-24 13:53:48) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:33:in `index'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 13:54:37) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-05-24 13:54:37) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:33:in `index'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 14:08:59) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 14:09:01) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 14:09:05) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users.%23%3Cuser:0x3b87e50%3E
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index to #<user:0x3b87e50> (for 127.0.0.1 at 2011-05-24 14:09:05) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 14:09:06) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users.%23%3Cuser:0x3d70cd0%3E
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index to #<user:0x3d70cd0> (for 127.0.0.1 at 2011-05-24 14:09:07) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 14:09:12) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users.%23%3Cuser:0x3ae76f8%3E
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index to #<user:0x3ae76f8> (for 127.0.0.1 at 2011-05-24 14:09:12) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 14:21:42) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 14:21:45) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:21:45) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 14:22:42) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-05-24 14:22:42) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 14:54:51) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed in 47ms (DB: 16) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-05-24 14:54:51) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-05-24 14:55:18) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 14:56:04) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 14:56:16) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed in 219ms (DB: 16) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-05-24 14:56:16) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:57:43) [GET]
+  Parameters: {"id"=>"index"}
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:require_authentication] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 14:57:43) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:02) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 312ms (View: 172, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:06) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:07) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:08) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:08) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:08) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:08) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:09) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 109ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:09) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:09) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:09) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:09) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:09) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:09) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:09) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 94ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:10) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:10) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:10) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:10) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:10) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:10) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:10) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 78ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:10) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:11) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:11) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:11) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:11) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:11) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:11) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:11) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 94ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:11) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:11) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:12) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:12) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:12) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:12) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:12) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:12) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:12) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:12) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:12) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:13) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:13) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:13) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:13) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:13) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:13) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:13) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:48) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:49) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:49) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:50) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:50) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 14:58:50) [GET]
+  Parameters: {"id"=>"index"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/users/index]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 14:59:03) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 14:59:17) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"vlad", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'vlad') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-05-24 14:59:17) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 15:01:40) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"vlad", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'vlad') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-05-24 15:01:40) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 15:02:24) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"vlad", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'vlad') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-05-24 15:02:24) [GET]
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:7:in `index'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 15:04:56) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/session/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 15:05:01) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"g83EinRpZki153sMuDGOg+o4vSBzjSsaovtbsSbHTYc=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:05:01) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/show
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #21 of app/views/users/show.html.erb:
+18:   </li>
+19:   <li>
+20:     <%=link_to "Перегляд файлів інших користувачів.",
+21:       :controller => :storagefiles, :action => 'show_public',:id =>@user.id %>
+22:   </li>
+23:   <li>
+24:     <%=link_to "Перегляд своїх та чужих файлів без скачування.",
+
+    app/views/users/show.html.erb:21
+
+Rendered rescues/_trace (62.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:05:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-05-24 15:05:59) [GET]
+Redirected to http://localhost:3000/
+Completed in 62ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 15:05:59) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 15:06:05) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:06:05) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 15:06:08) [GET]
+  Parameters: {"user_id"=>"1"}
+Rendering template within layouts/application
+Rendering storagefiles/new
+
+ActionView::TemplateError (user_url failed to generate from {:action=>"show", :controller=>"users"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?) on line #20 of app/views/storagefiles/new.html.erb:
+17: <%= submit_tag "Upload" %>
+18: <% end %>
+19: 
+20: <%=  link_to "Back", user_url(params[:id])%>
+
+    (eval):16:in `user_url'
+    app/views/storagefiles/new.html.erb:20
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 15:10:15) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+
+ActionView::TemplateError (user_url failed to generate from {:action=>"show", :controller=>"users"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["users", :id] - are they all satisfied?) on line #20 of app/views/storagefiles/new.html.erb:
+17: <%= submit_tag "Upload" %>
+18: <% end %>
+19: 
+20: <%=  link_to "Back", user_url(params[:id])%>
+
+    (eval):16:in `user_url'
+    app/views/storagefiles/new.html.erb:20
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 15:11:04) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:11:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 15:11:08) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 15:11:19) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-4372-c157g1-0>}, "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+
+NoMethodError (undefined method `storagefile' for #<User:0x3ce4660>):
+  app/controllers/storagefiles_controller.rb:8:in `uploadFile'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 15:18:24) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-4372-vlry9l-0>}, "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "id"=>"1"}
+  [4;35;1mUser Columns (62.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+
+NoMethodError (undefined method `storagefile' for #<User:0x3d59780>):
+  app/controllers/storagefiles_controller.rb:8:in `uploadFile'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 15:18:28) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-4372-1cglduq-0>}, "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+
+NoMethodError (undefined method `storagefile' for #<User:0x3b6c160>):
+  app/controllers/storagefiles_controller.rb:8:in `uploadFile'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 15:19:11) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-4372-tjfkoe-0>}, "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "id"=>"1"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mStoragefile Columns (31.2ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Create (78.1ms)[0m   [0mINSERT INTO `storagefiles` (`name`, `size`, `created_at`, `files_type`, `updated_at`, `user_id`, `path`, `access`) VALUES(NULL, NULL, '2011-05-24 12:19:11', NULL, '2011-05-24 12:19:11', 1, NULL, 'private')[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1 AND `storagefiles`.`name` = 'articles.doc') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Create (15.6ms)[0m   [0mINSERT INTO `storagefiles` (`name`, `size`, `created_at`, `files_type`, `updated_at`, `user_id`, `path`, `access`) VALUES('articles.doc', 321024, '2011-05-24 12:19:11', 'application/msword', '2011-05-24 12:19:11', 1, './public/data/articles.doc', 'private')[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles/new
+Completed in 359ms (DB: 203) | 302 Found [http://localhost/storagefiles/uploadFile/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 15:19:11) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:19:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 15:20:15) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 94ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 15:20:24) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-4372-1b83t6r-0>}, "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE="}
+
+RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+  app/controllers/storagefiles_controller.rb:12:in `uploadFile'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 15:20:54) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-4372-15vw31j-0>}, "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE="}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (31.2ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1 AND `storagefiles`.`name` = 'код ошибок.doc') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Create (0.0ms)[0m   [0mINSERT INTO `storagefiles` (`name`, `size`, `created_at`, `files_type`, `updated_at`, `user_id`, `path`, `access`) VALUES('код ошибок.doc', 74752, '2011-05-24 12:20:54', 'application/msword', '2011-05-24 12:20:54', 1, './public/data/код ошибок.doc', 'private')[0m
+  [4;36;1mSQL (93.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles/new
+Completed in 188ms (DB: 125) | 302 Found [http://localhost/storagefiles/uploadFile]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 15:20:54) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:21:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 15:21:35) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering ./storagefiles/show
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#show_public (for 127.0.0.1 at 2011-05-24 15:21:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStoragefile Load (15.6ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (access = 'public' AND user_id <> 1) ORDER BY user_id asc[0m
+Rendering template within layouts/application
+Rendering ./storagefiles/show_public
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 62ms (View: 16, DB: 16) | 200 OK [http://localhost/storagefiles/show_public/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#show_all (for 127.0.0.1 at 2011-05-24 15:21:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` ORDER BY user_id asc[0m
+Rendering template within layouts/application
+Rendering ./storagefiles/show_all
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mUser Load (31.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 78ms (View: 16, DB: 31) | 200 OK [http://localhost/storagefiles/show_all/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:22:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 109ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:23:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 15:24:00) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:24:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 15:32:51) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 15:32:56) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-4372-6h0sg7-0>}, "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE="}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1 AND `storagefiles`.`name` = 'Презентация1.pps') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Create (0.0ms)[0m   [0mINSERT INTO `storagefiles` (`name`, `size`, `created_at`, `files_type`, `updated_at`, `user_id`, `path`, `access`) VALUES('Презентация1.pps', 292352, '2011-05-24 12:32:56', 'application/vnd.ms-powerpoint', '2011-05-24 12:32:56', 1, './public/data/Презентация1.pps', 'private')[0m
+  [4;36;1mSQL (78.1ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles/new
+Completed in 188ms (DB: 78) | 302 Found [http://localhost/storagefiles/uploadFile]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 15:32:56) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:33:00) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 15:33:06) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 15:33:09) [POST]
+  Parameters: {"access_id"=>["50"], "commit"=>"Submit", "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "id"=>"1"}
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1 AND `storagefiles`.`id` = 50) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Update (0.0ms)[0m   [0mUPDATE `storagefiles` SET `updated_at` = '2011-05-24 12:33:09', `access` = 'public' WHERE `id` = 50[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+
+NoMethodError (undefined method `storagefile_path' for #<StoragefilesController:0x3a19cd0>):
+  app/controllers/storagefiles_controller.rb:73:in `apply'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 15:36:07) [POST]
+  Parameters: {"access_id"=>["50"], "commit"=>"Submit", "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "id"=>"1"}
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1 AND `storagefiles`.`id` = 50) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStoragefile Update (0.0ms)[0m   [0;1mUPDATE `storagefiles` SET `updated_at` = '2011-05-24 12:36:07', `access` = 'private' WHERE `id` = 50[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users//storagefiles
+Completed in 62ms (DB: 47) | 302 Found [http://localhost/storagefiles/apply/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-05-24 15:36:08) [GET]
+
+ActionController::RoutingError (No route matches "/users//storagefiles" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:36:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 15:36:21) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+Completed in 94ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 15:36:27) [POST]
+  Parameters: {"access_id"=>["50"], "commit"=>"Submit", "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "id"=>"1"}
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1 AND `storagefiles`.`id` = 50) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStoragefile Update (0.0ms)[0m   [0;1mUPDATE `storagefiles` SET `updated_at` = '2011-05-24 12:36:27', `access` = 'public' WHERE `id` = 50[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users//storagefiles
+Completed in 47ms (DB: 31) | 302 Found [http://localhost/storagefiles/apply/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-05-24 15:36:27) [GET]
+
+ActionController::RoutingError (No route matches "/users//storagefiles" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 15:36:39) [POST]
+  Parameters: {"access_id"=>["51"], "commit"=>"Submit", "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "id"=>"1"}
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1 AND `storagefiles`.`id` = 51) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Update (0.0ms)[0m   [0mUPDATE `storagefiles` SET `updated_at` = '2011-05-24 12:36:39', `access` = 'public' WHERE `id` = 51[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users//storagefiles
+Completed in 47ms (DB: 31) | 302 Found [http://localhost/storagefiles/apply/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-05-24 15:36:39) [GET]
+
+ActionController::RoutingError (No route matches "/users//storagefiles" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`id` = 100) [0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`id` = 100) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStoragefile Destroy (0.0ms)[0m   [0;1mDELETE FROM `storagefiles` WHERE `id` = 100[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 15:40:57) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 15:41:02) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 203ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:41:02) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 94ms (View: 31, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 15:41:04) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 15:41:08) [POST]
+  Parameters: {"access_id"=>["51"], "commit"=>"Submit", "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "id"=>"1"}
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1 AND `storagefiles`.`id` = 51) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStoragefile Update (0.0ms)[0m   [0;1mUPDATE `storagefiles` SET `updated_at` = '2011-05-24 12:41:08', `access` = 'private' WHERE `id` = 51[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users//storagefiles
+Completed in 47ms (DB: 31) | 302 Found [http://localhost/storagefiles/apply/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-05-24 15:41:08) [GET]
+
+ActionController::RoutingError (No route matches "/users//storagefiles" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 15:42:22) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 15:42:27) [POST]
+  Parameters: {"access_id"=>["51"], "commit"=>"Submit", "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1 AND `storagefiles`.`id` = 51) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Update (0.0ms)[0m   [0mUPDATE `storagefiles` SET `updated_at` = '2011-05-24 12:42:27', `access` = 'public' WHERE `id` = 51[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles
+Completed in 78ms (DB: 31) | 302 Found [http://localhost/storagefiles/apply/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 15:42:27) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 15:42:32) [POST]
+  Parameters: {"access_id"=>["52"], "commit"=>"Submit", "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1 AND `storagefiles`.`id` = 52) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStoragefile Update (0.0ms)[0m   [0;1mUPDATE `storagefiles` SET `updated_at` = '2011-05-24 12:42:32', `access` = 'public' WHERE `id` = 52[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles
+Completed in 78ms (DB: 31) | 302 Found [http://localhost/storagefiles/apply/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 15:42:32) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 15:42:36) [POST]
+  Parameters: {"deleteFiles"=>["51"], "commit"=>"Submit", "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`id` = 51) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Destroy (0.0ms)[0m   [0mDELETE FROM `storagefiles` WHERE `id` = 51[0m
+  [4;36;1mSQL (46.9ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles
+Completed in 109ms (DB: 47) | 302 Found [http://localhost/storagefiles/apply/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 15:42:36) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:42:38) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#show_public (for 127.0.0.1 at 2011-05-24 15:42:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (access = 'public' AND user_id <> 1) ORDER BY user_id asc[0m
+Rendering template within layouts/application
+Rendering ./storagefiles/show_public
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/storagefiles/show_public/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 15:44:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 15:59:59) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 78ms (View: 78, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 16:00:04) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"iuV2dF1/T9VjW1lCdOP5LKUZYb4NzkEAQ6AGdTcALiE=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 172ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 16:00:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#show_public (for 127.0.0.1 at 2011-05-24 16:00:29) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (access = 'public' AND user_id <> 1) ORDER BY user_id asc[0m
+Rendering template within layouts/application
+Rendering ./storagefiles/show_public
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/show_public]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 16:00:33) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#show_all (for 127.0.0.1 at 2011-05-24 16:00:34) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` ORDER BY user_id asc[0m
+Rendering template within layouts/application
+Rendering ./storagefiles/show_all
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/show_all]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 16:01:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 17:34:10) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 94ms (View: 94, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 17:34:17) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"3CJWw0b77ZVjyTf9m/3ySVD0x/7FfYOJK7CVRsWVKXw=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 250ms (DB: 16) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 17:34:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 188ms (View: 31, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 17:34:19) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 17:34:27) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-5516-13ogwti-0>}, "authenticity_token"=>"3CJWw0b77ZVjyTf9m/3ySVD0x/7FfYOJK7CVRsWVKXw="}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mStoragefile Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`name` = 'Названы самые грязные города Украины.doc') AND (`storagefiles`.user_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStoragefile Create (0.0ms)[0m   [0;1mINSERT INTO `storagefiles` (`name`, `size`, `created_at`, `files_type`, `updated_at`, `user_id`, `path`, `access`) VALUES(NULL, NULL, '2011-05-24 14:34:27', NULL, '2011-05-24 14:34:27', 1, NULL, 'private')[0m
+  [4;35;1mSQL (31.2ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles/new
+Completed in 156ms (DB: 47) | 302 Found [http://localhost/storagefiles/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 17:34:27) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 17:35:33) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-5516-4wdgw7-0>}, "authenticity_token"=>"3CJWw0b77ZVjyTf9m/3ySVD0x/7FfYOJK7CVRsWVKXw="}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+
+NameError (undefined local variable or method `upload' for #<StoragefilesController:0x3542f28>):
+  app/controllers/storagefiles_controller.rb:8:in `uploadFile'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 17:36:41) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 17:36:47) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-5516-1czpj69-0>}, "authenticity_token"=>"3CJWw0b77ZVjyTf9m/3ySVD0x/7FfYOJK7CVRsWVKXw="}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`name` = 'bublyk.doc') AND (`storagefiles`.user_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Create (0.0ms)[0m   [0mINSERT INTO `storagefiles` (`name`, `size`, `created_at`, `files_type`, `updated_at`, `user_id`, `path`, `access`) VALUES(NULL, NULL, '2011-05-24 14:36:47', NULL, '2011-05-24 14:36:47', 1, NULL, 'private')[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles/new
+Completed in 109ms (DB: 31) | 302 Found [http://localhost/storagefiles/uploadFile]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 17:36:47) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 17:39:34) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 17:39:40) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-5516-1fh6wor-0>}, "authenticity_token"=>"3CJWw0b77ZVjyTf9m/3ySVD0x/7FfYOJK7CVRsWVKXw="}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`name` = 'bublyk.doc') AND (`storagefiles`.user_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStoragefile Create (0.0ms)[0m   [0;1mINSERT INTO `storagefiles` (`name`, `size`, `created_at`, `files_type`, `updated_at`, `user_id`, `path`, `access`) VALUES('bublyk.doc', 53248, '2011-05-24 14:39:40', 'application/msword', '2011-05-24 14:39:40', 1, './public/data/bublyk.doc', 'private')[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles/new
+Completed in 125ms (DB: 47) | 302 Found [http://localhost/storagefiles/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 17:39:40) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 17:45:19) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 17:45:48) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-5516-38ospx-0>}, "authenticity_token"=>"3CJWw0b77ZVjyTf9m/3ySVD0x/7FfYOJK7CVRsWVKXw="}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`name` = 'bublyk.doc') AND (`storagefiles`.user_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Update (0.0ms)[0m   [0mUPDATE `storagefiles` SET `updated_at` = '2011-05-24 14:45:48', `size` = 26624 WHERE `id` = 56[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles/new
+Completed in 188ms (DB: 31) | 302 Found [http://localhost/storagefiles/uploadFile]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 17:45:48) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 17:48:47) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-5516-xuk0i2-0>}, "authenticity_token"=>"3CJWw0b77ZVjyTf9m/3ySVD0x/7FfYOJK7CVRsWVKXw="}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Redirected to http://localhost:3000/users/1/storagefiles/new
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/storagefiles/uploadFile]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 17:48:47) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 17:49:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 17:49:29) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 17:49:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#show_public (for 127.0.0.1 at 2011-05-24 17:49:33) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (access = 'public' AND user_id <> 1) ORDER BY user_id asc[0m
+Rendering template within layouts/application
+Rendering ./storagefiles/show_public
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/show_public]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 17:49:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#show_all (for 127.0.0.1 at 2011-05-24 17:49:36) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` ORDER BY user_id asc[0m
+Rendering template within layouts/application
+Rendering ./storagefiles/show_all
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/show_all]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 17:49:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 17:51:38) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 17:51:47) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-5516-1gu2cei-0>}, "authenticity_token"=>"3CJWw0b77ZVjyTf9m/3ySVD0x/7FfYOJK7CVRsWVKXw="}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`name` = 'bublyk.doc') AND (`storagefiles`.user_id = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles/new
+Completed in 62ms (DB: 0) | 302 Found [http://localhost/storagefiles/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 17:51:47) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 17:51:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 17:51:56) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 18:00:35) [POST]
+  Parameters: {"deleteFiles"=>["56"], "commit"=>"Submit", "authenticity_token"=>"3CJWw0b77ZVjyTf9m/3ySVD0x/7FfYOJK7CVRsWVKXw=", "id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.storagefiles):
+  app/models/storagefile.rb:9:in `destroy'
+  app/models/storagefile.rb:8:in `each'
+  app/models/storagefile.rb:8:in `destroy'
+  app/controllers/storagefiles_controller.rb:79:in `apply'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 18:01:35) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 18:01:38) [POST]
+  Parameters: {"deleteFiles"=>["56"], "commit"=>"Submit", "authenticity_token"=>"3CJWw0b77ZVjyTf9m/3ySVD0x/7FfYOJK7CVRsWVKXw=", "id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`id` = 56) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStoragefile Destroy (0.0ms)[0m   [0;1mDELETE FROM `storagefiles` WHERE `id` = 56[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles
+Completed in 78ms (DB: 47) | 302 Found [http://localhost/storagefiles/apply/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 18:01:39) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`user_id` = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 18:02:03) [POST]
+  Parameters: {"deleteFiles"=>["54", "55"], "commit"=>"Submit", "authenticity_token"=>"3CJWw0b77ZVjyTf9m/3ySVD0x/7FfYOJK7CVRsWVKXw=", "id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`id` = 54) [0m
+
+TypeError (can't convert nil into String):
+  app/models/storagefile.rb:11:in `join'
+  app/models/storagefile.rb:11:in `destroy'
+  app/models/storagefile.rb:8:in `each'
+  app/models/storagefile.rb:8:in `destroy'
+  app/controllers/storagefiles_controller.rb:79:in `apply'
+
+Rendered rescues/_trace (46.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:02:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#show_public (for 127.0.0.1 at 2011-05-24 18:02:14) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (access = 'public' AND user_id <> 1) ORDER BY user_id asc[0m
+Rendering template within layouts/application
+Rendering ./storagefiles/show_public
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/show_public]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:02:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#show_all (for 127.0.0.1 at 2011-05-24 18:02:18) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` ORDER BY user_id asc[0m
+Rendering template within layouts/application
+Rendering ./storagefiles/show_all
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/show_all]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:02:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-05-24 18:02:23) [GET]
+Redirected to http://localhost:3000/
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 18:02:24) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`id` = 54) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Destroy (0.0ms)[0m   [0mDELETE FROM `storagefiles` WHERE `id` = 54[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`id` = 55) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Destroy (0.0ms)[0m   [0mDELETE FROM `storagefiles` WHERE `id` = 55[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-05-24 18:20:01) [GET]
+Redirected to http://localhost:3000/
+Completed in 203ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 18:20:02) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 18:20:05) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 18:20:11) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"8zVWUqrByED8vLolwnsWTHZHUhbh6yDgo/rS8kyvvk0=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:20:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 18:20:14) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.storagefiles):
+  app/controllers/storagefiles_controller.rb:36:in `index'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:22:46) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 18:22:48) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.user_id = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:22:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#show_all (for 127.0.0.1 at 2011-05-24 18:22:57) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` ORDER BY user_id asc[0m
+Rendering template within layouts/application
+Rendering ./storagefiles/show_all
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 94ms (View: 62, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/show_all]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:36:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 94ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-05-24 18:36:38) [GET]
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 18:36:38) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 16ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 18:36:44) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"gv9X2YZ13oMGxrSsJMunklMkspvojaHODcPt9UXAO0I=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:36:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 18:36:45) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 18:36:49) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-4304-1jwgthc-0>}, "authenticity_token"=>"gv9X2YZ13oMGxrSsJMunklMkspvojaHODcPt9UXAO0I="}
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/storagefiles_controller.rb:7:in `uploadFile'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:39:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2011-05-24 18:39:45) [GET]
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 18:39:45) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 18:39:50) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"jSXYEP/E08b45ZV3YJDBTBXVl3nYENvQIW2LQt3v4QQ=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:39:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#show_all (for 127.0.0.1 at 2011-05-24 18:39:51) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` ORDER BY user_id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/show_all
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 125ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/show_all]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:39:53) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#show_public (for 127.0.0.1 at 2011-05-24 18:39:54) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (access = 'public' AND user_id <> '1') ORDER BY user_id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/show_public
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 2) [0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/show_public]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:39:56) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 18:40:01) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.user_id = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 18:40:08) [POST]
+  Parameters: {"access_id"=>["52"], "commit"=>"Submit", "authenticity_token"=>"jSXYEP/E08b45ZV3YJDBTBXVl3nYENvQIW2LQt3v4QQ=", "id"=>"1"}
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/storagefiles_controller.rb:64:in `apply'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2011-05-24 18:46:50) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Completed in 266ms (View: 266, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2011-05-24 18:46:55) [POST]
+  Parameters: {"commit"=>"Log in", "authenticity_token"=>"jSXYEP/E08b45ZV3YJDBTBXVl3nYENvQIW2LQt3v4QQ=", "login"=>"root", "password"=>"cjdthityyj"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'root') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1
+Completed in 31ms (DB: 0) | 302 Found [http://localhost/session]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:46:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 18:46:57) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 62ms (View: 31, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 18:47:02) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-5320-1ygqrg-0>}, "authenticity_token"=>"jSXYEP/E08b45ZV3YJDBTBXVl3nYENvQIW2LQt3v4QQ=", "user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Redirected to http://localhost:3000/users/1/storagefiles/new
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/users/1/storagefiles/uploadFile]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 18:47:03) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 94ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#uploadFile (for 127.0.0.1 at 2011-05-24 18:47:22) [POST]
+  Parameters: {"commit"=>"Upload", "upload"=>{"datafile"=>#<File:C:/DOCUME~1/Vlad/LOCALS~1/Temp/RackMultipart20110524-5320-1xarjga-0>}, "authenticity_token"=>"jSXYEP/E08b45ZV3YJDBTBXVl3nYENvQIW2LQt3v4QQ=", "user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`name` = 'радиоэзернет.doc') AND (`storagefiles`.user_id = 1) LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mStoragefile Create (0.0ms)[0m   [0;1mINSERT INTO `storagefiles` (`name`, `size`, `created_at`, `files_type`, `updated_at`, `user_id`, `path`, `access`) VALUES('радиоэзернет.doc', 29696, '2011-05-24 15:47:22', 'application/msword', '2011-05-24 15:47:22', 1, './public/data/радиоэзернет.doc', 'private')[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles/new
+Completed in 109ms (DB: 47) | 302 Found [http://localhost/users/1/storagefiles/uploadFile]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#new (for 127.0.0.1 at 2011-05-24 18:47:22) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering storagefiles/new
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:47:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 18:47:45) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.user_id = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+Completed in 62ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 18:47:51) [POST]
+  Parameters: {"access_id"=>["57"], "commit"=>"Submit", "authenticity_token"=>"jSXYEP/E08b45ZV3YJDBTBXVl3nYENvQIW2LQt3v4QQ=", "user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`id` = 57 AND (`storagefiles`.user_id = 1)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Update (15.6ms)[0m   [0mUPDATE `storagefiles` SET `updated_at` = '2011-05-24 15:47:51', `access` = 'public' WHERE `id` = 57[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles
+Completed in 78ms (DB: 47) | 302 Found [http://localhost/users/1/storagefiles/apply]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 18:47:51) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.user_id = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 18:47:57) [POST]
+  Parameters: {"access_id"=>["57"], "commit"=>"Submit", "authenticity_token"=>"jSXYEP/E08b45ZV3YJDBTBXVl3nYENvQIW2LQt3v4QQ=", "user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`id` = 57 AND (`storagefiles`.user_id = 1)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Update (0.0ms)[0m   [0mUPDATE `storagefiles` SET `updated_at` = '2011-05-24 15:47:57', `access` = 'private' WHERE `id` = 57[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles
+Completed in 78ms (DB: 31) | 302 Found [http://localhost/users/1/storagefiles/apply]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 18:47:57) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.user_id = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+Completed in 47ms (View: 16, DB: 16) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#apply (for 127.0.0.1 at 2011-05-24 18:48:04) [POST]
+  Parameters: {"deleteFiles"=>["57"], "commit"=>"Submit", "authenticity_token"=>"jSXYEP/E08b45ZV3YJDBTBXVl3nYENvQIW2LQt3v4QQ=", "user_id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `storagefiles`[0m
+  [4;35;1mStoragefile Load (0.0ms)[0m   [0mSELECT * FROM `storagefiles` WHERE (`storagefiles`.`id` = 57) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mStoragefile Destroy (0.0ms)[0m   [0mDELETE FROM `storagefiles` WHERE `id` = 57[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/users/1/storagefiles
+Completed in 62ms (DB: 31) | 302 Found [http://localhost/users/1/storagefiles/apply]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing StoragefilesController#index (for 127.0.0.1 at 2011-05-24 18:48:04) [GET]
+  Parameters: {"user_id"=>"1"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+  [4;36;1mStoragefile Load (0.0ms)[0m   [0;1mSELECT * FROM `storagefiles` WHERE (`storagefiles`.user_id = 1) ORDER BY id asc[0m
+Rendering template within layouts/application
+Rendering storagefiles/index
+  [4;35;1mStoragefile Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `storagefiles`[0m
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/users/1/storagefiles]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-05-24 18:48:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/users/1]
