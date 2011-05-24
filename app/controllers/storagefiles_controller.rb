@@ -5,15 +5,26 @@ class StoragefilesController < ApplicationController
   end
   def uploadFile
     @user = User.find(session[:id])
-#    @user.storagefiles<< Storagefile.new(:name=>@fname, :path=>@fpath,:files_type=>@ftype,
-#    :size=>@fsize, :access=>'private')
-#
-
-    @post = Storagefile.save(params[:upload],@user.id)
-    if @post
-      flash[:notice] ="File uploaded successfully"
+    name =  params[:upload]['datafile'].original_filename
+    file_ext = File.extname(name)         #=> ".rb"
+    arr_types = Array['.doc','.docx','.docm','.dot','.dotx','.dotm','.rtf','.ppt','.pot','.pps']
+    if (arr_types.include?(file_ext))
+      begin
+        directory = "./public/data"
+        fpath = File.join(directory, name)
+        ftype = params[:upload]['datafile'].content_type
+        fsize = params[:upload]['datafile'].size
+        #      c = Storagefile.find_by_name_and_user_id(name, user_id)
+        c = @user.storagefiles.find_by_name(name)
+        c.update_attributes(:name =>name,:path =>fpath,:files_type =>ftype,:size =>fsize,:access =>'private')
+      rescue #RecordNotFound
+        @user.storagefiles << Storagefile.new(:name=>name, :path=>fpath,:files_type=>ftype,:size=>fsize, :access=>'private')
+      end
+      # write the file
+      File.open(fpath, "wb") { |f| f.write(params[:upload]['datafile'].read) }
+      flash[:notice] ="File uploaded successfully "
     else
-      flash[:notice] = "Cannot upload file. You can upload only Word & PPoint files!"
+      flash[:notice] = "Cannot upload file. You can upload only Word & PowerPoint files!"
     end
     redirect_to new_user_storagefile_path(@user)
   end
@@ -54,7 +65,7 @@ class StoragefilesController < ApplicationController
       if access_ids
         flash[:notice] = "Files successfully updated"
         access_ids.each do |id|
-          r = Storagefile.find_by_id_and_user_id(id,session[:id])
+          r = @user.storagefiles.find(id)
           if r.access == "public"
             r.access = "private"
           else
