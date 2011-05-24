@@ -1,27 +1,31 @@
 class StoragefilesController < ApplicationController
   before_filter :require_authentication, :only=>[:index,:show,:show_all,:show_public]
-  def index
-    render :action => "index", :id => params[:id]
+  def new
+    @user = User.find(session[:id])
   end
   def uploadFile
-#    arr_types = Array['.doc','.docx','.docm','.dot','.dotx','.dotm','.rtf','.ppt','.pot','.pps']
-    @post = Storagefile.save(params[:upload],session[:id])
+    @user = User.find(session[:id])
+#    @user.storagefiles<< Storagefile.new(:name=>@fname, :path=>@fpath,:files_type=>@ftype,
+#    :size=>@fsize, :access=>'private')
+#
+
+    @post = Storagefile.save(params[:upload],@user.id)
     if @post
       flash[:notice] ="File uploaded successfully"
     else
       flash[:notice] = "Cannot upload file. You can upload only Word & PPoint files!"
     end
-    redirect_to storagefiles_path(:id =>session[:id])
+    redirect_to new_user_storagefile_path(@user)
   end
 
-  def show
+  def index
     case params[:ffield]
     when 'files_type','size','name'
       @sfiles = Storagefile.find_all_by_user_id(session[:id], :order => "#{params[:ffield]} #{params[:order]}")
     else
       @sfiles = Storagefile.find_all_by_user_id(session[:id], :order => "id asc")
     end
-    render :template => "./storagefiles/show"
+    render :action => "index"
   end
   def show_all
     case params[:ffield]
@@ -44,6 +48,7 @@ class StoragefilesController < ApplicationController
   end
   def apply
     if request.post?
+      @user = User.find(session[:id])
       access_ids = params[:access_id].collect {|id| id.to_i} if params[:access_id]
       delete_ids = params[:deleteFiles].collect {|id| id.to_i} if params[:deleteFiles]
       if access_ids
@@ -66,7 +71,7 @@ class StoragefilesController < ApplicationController
       flash[:notice] = ""  if !access_ids && !delete_ids
        
     end
-    redirect_to storagefile_path(@user)
+    redirect_to user_storagefiles_path(@user)
   end
  
 end

@@ -2,12 +2,15 @@ ActionController::Routing::Routes.draw do |map|
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.register '/register', :controller => 'users', :action => 'create'
   map.signup '/signup', :controller => 'users', :action => 'new'
-  map.resources :users
   map.login '/', :controller => 'sessions', :action => 'new'
   map.resource :session
-  map.resources :storagefiles
-  map.resources :users
-  
+
+#  map.resources :users
+#  map.resources :storagefiles
+#  map.resources :users, :has_many => :storagefiles
+  map.resources :users do |user|
+    user.resources :storagefiles, :collection=>{:show_all=>:any,:show_public=>:any}
+  end
 #  , :active_scaffold :user
   # The priority is based upon order of creation: first created -> highest priority.
 

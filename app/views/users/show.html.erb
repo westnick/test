@@ -1,4 +1,3 @@
-<%= stylesheet_link_tag "main.css" %>
 <% if logged_in? -%>
   <div id="user-bar-greeting">Logged in as <%= link_to_current_user :content_method => :login %></div>
   <div id="user-bar-action"  >(<%= link_to "Log out", logout_path, { :title => "Log out" }    %>)</div>
@@ -12,20 +11,16 @@
   <div class="flashn" style="font-size:medium;"><%=flash[:notice]%></div>
 <%end-%>
 <ol>
-  <li>Реєстрація нового користувача.</li>
-  <li>Вхід для користувача.</li>
-  <li><%=link_to "Завантаження файлу.", storagefiles_path(:id =>session[:id])  %></li>
+  <li><%=link_to "Завантаження файлу.", new_user_storagefile_path(@user)  %></li>
   <li>
     <%=link_to "Перегляд та редагування списку файлів користувача (сортування за типом, розміром,
-    назвою; можливість видалити файл чи відмітити як загальнодоступний).", storagefile_path(@user.id) %>
+    назвою; можливість видалити файл чи відмітити як загальнодоступний).", user_storagefiles_path(@user) %>
   </li>
   <li>
-    <%=link_to "Перегляд файлів інших користувачів.",
-      :controller => :storagefiles, :action => 'show_public',:id =>@user.id %>
+    <%=link_to "Перегляд файлів інших користувачів.", show_public_user_storagefiles_path(@user)%>
   </li>
   <li>
-    <%=link_to "Перегляд своїх та чужих файлів без скачування.",
-      :controller => :storagefiles, :action => 'show_all',:id =>@user.id %>
+    <%=link_to "Перегляд своїх та чужих файлів без скачування.",show_all_user_storagefiles_path(@user) %>
   </li>
 
 </ol>

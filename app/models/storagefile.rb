@@ -1,8 +1,8 @@
 class Storagefile < ActiveRecord::Base
-#  belongs_to :user
-attr_accessible :user_id, :name, :name, :path, :files_type, :size, :access
-#attr_reader :attr_names
-#attr_writer :attr_names
+  belongs_to :user, :foreign_key => "user_id"
+  attr_accessible :user_id, :name, :name, :path, :files_type, :size, :access
+  #attr_reader :attr_names
+  #attr_writer :attr_names
   def self.save(upload, user_id)
       name =  upload['datafile'].original_filename
       file_ext = File.extname(name)         #=> ".rb"

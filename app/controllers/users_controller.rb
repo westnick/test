@@ -3,8 +3,10 @@ class UsersController < ApplicationController
   include AuthenticatedSystem
   before_filter :require_authentication, :only=>:show
 #  active_scaffold :user
+  def show
+     @user = User.find(params[:id])
+  end
 
-  # render new.rhtml
   def new
     @user = User.new
   end
@@ -29,8 +31,6 @@ class UsersController < ApplicationController
       render :action => 'new'
     end
   end
-  def show
-     @user = User.find(params[:id])
-  end
+ 
 
 end
