@@ -9,7 +9,8 @@ ActionController::Routing::Routes.draw do |map|
 #  map.resources :storagefiles
 #  map.resources :users, :has_many => :storagefiles
   map.resources :users do |user|
-    user.resources :storagefiles, :collection=>{:show_all=>:any,:show_public=>:any}
+    user.resources :storagefiles, :collection=>{:show_all=>:any,:show_public=>:any,
+    :uploadFile=>:any,:apply=>:any}
   end
 #  , :active_scaffold :user
   # The priority is based upon order of creation: first created -> highest priority.

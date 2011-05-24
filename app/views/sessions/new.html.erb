@@ -1,5 +1,5 @@
 <div class="Login" style="text-align: center;">
-  <%if !session[:id] && flash[:notice]%>
+  <%if !logged_in? && flash[:notice]%>
     <div class="flashn" style="margin-left: 330px;text-align: center;"><%=flash[:notice]%></div>
   <%end-%>
 

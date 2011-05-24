@@ -19,7 +19,7 @@
   <li>можливість відмітити як загальнодоступний</li>
 </ol>
 </div>
-<%= form_tag :action =>'apply', :id => session[:id]  %>
+<%= form_tag apply_user_storagefiles_url(@user)  %>
     <div class="colls" >
         <div class="header"> File Name &nbsp </div>
         <div class="header field"> File Type &nbsp </div>
@@ -46,4 +46,4 @@
 <%= submit_tag 'Submit' -%>
 <div style="clear: both;height:20px;">&nbsp;</div>
 
-<div><%=  link_to "Back", user_url(:id => session[:id]) %></div>
+<div><%=  link_to "Back", user_url(@user) %></div>

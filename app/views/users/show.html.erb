@@ -7,7 +7,7 @@
   <div id="user-bar-action"  ><%= link_to "Log in",  login_path,  { :title => "Log in" } %> /
                                <%= link_to "Sign up", signup_path, { :title => "Create an account" } %></div>
 <% end -%>
-<%if session[:id] && flash[:notice]== "Logged in successfully"%>
+<%if logged_in? && flash[:notice]== "Logged in successfully"%>
   <div class="flashn" style="font-size:medium;"><%=flash[:notice]%></div>
 <%end-%>
 <ol>
