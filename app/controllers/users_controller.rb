@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
-  include AuthenticatedSystem
-  before_filter :require_authentication, :only=>:show
+#  include AuthenticatedSystem
+  before_filter :require_authentication, :only=>[:index,:show]
 #  active_scaffold :user
   def show
      @user = User.find(params[:id])

@@ -1,5 +1,5 @@
 class StoragefilesController < ApplicationController
-  before_filter :require_authentication, :only=>[:index,:show,:show_all,:show_public]
+  before_filter :require_authentication, :only=>[:index,:new,:show,:show_all,:show_public]
   def new
     @user = User.find(params[:user_id])
   end
