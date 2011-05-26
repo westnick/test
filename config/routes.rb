@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
-  map.register '/register', :controller => 'users', :action => 'create'
+  map.register '/register', :controller => 'users', :action => 'new'
   map.signup '/signup', :controller => 'users', :action => 'new'
   map.login '/', :controller => 'sessions', :action => 'new'
   map.resource :session

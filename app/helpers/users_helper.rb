@@ -92,4 +92,5 @@ module UsersHelper
   def user_name (user_id)
     name = User.find(user_id).login
   end
+  
 end

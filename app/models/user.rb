@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   include Authentication
   include Authentication::ByPassword
   include Authentication::ByCookieToken
-#  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
   validates_presence_of     :login
   validates_length_of       :login,    :within => 3..40
@@ -47,6 +46,8 @@ class User < ActiveRecord::Base
   def email=(value)
     write_attribute :email, (value ? value.downcase : nil)
   end
-
+  def not_user_empty?(ffield)
+    !(ffield.empty?)
+  end
   
 end
