@@ -8,10 +8,10 @@ module Authentication
         
         # Virtual attribute for the unencrypted password
         attr_accessor :password
-        validates_presence_of     :password,                   :if => :password_required?
-        validates_presence_of     :password_confirmation,      :if => :password_required?
-        validates_confirmation_of :password,                   :if => :password_required?
-        validates_length_of       :password, :within => 6..40, :if => :password_required?
+        validates_presence_of     :password, :message=> "Password can't be blank",                            :if => :password_required?
+        validates_presence_of     :password_confirmation,:message=> "Confirmation password can't be blank",   :if => :password_required?
+        validates_confirmation_of :password, :message=> "Password doesn't match confirmation",                :if => :password_required?
+        validates_length_of       :password, :within => 6..40, :message=> "Password should be in range 6..40",:if => :password_required?
         before_save :encrypt_password
       end
     end # #included directives

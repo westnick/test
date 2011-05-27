@@ -92,5 +92,22 @@ module UsersHelper
   def user_name (user_id)
     name = User.find(user_id).login
   end
-  
+  def error_message_on_user
+
+    if !error_message_on(@user,:login).empty?
+      return error_message_on(@user,:login)
+    else
+      if !error_message_on(@user,:email).empty?
+        return error_message_on(@user,:email)
+      else
+        if !error_message_on(@user,:password).empty?
+          return error_message_on(@user,:password)
+        else
+          if !error_message_on(@user,:password_confirmation).empty?
+            return error_message_on(@user,:password_confirmation)
+          end
+        end
+      end
+    end
+  end
 end
